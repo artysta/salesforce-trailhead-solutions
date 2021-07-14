@@ -1,0 +1,41 @@
+<aura:component>
+    <aura:attribute name="items" type="Camping_Item__c[]" />
+    <aura:attribute name="newItem" type="Camping_Item__c" default="{'Name':'',
+            'Quantity__c':0,
+            'Price__c':0,
+            'Packed__c':false,
+            'sobjectType':'Camping_Item__c'}" />
+    <div class="slds-col slds-col--padded slds-p-top--large">
+        <div aria-labelledby="newCampingItemForm">
+            <fieldset class="slds-box slds-theme--default slds-container--small">
+                <legend id="newCampingItemForm" class="slds-text-heading--smallslds-p-vertical--medium">
+                    Add Camping Item
+                </legend>
+                <form class="slds-form--stacked">
+                    <lightning:input aura:id="campingitemform" label="Camping Item Name" name="campingitemname"
+                        value="{!v.newItem.Name}" required="true" />
+                    <lightning:input type="number" aura:id="campingitemform" label="Quantity" name="campingitemquantity"
+                        min="1" value="{!v.newItem.Quantity__c}" messageWhenRangeUnderflow="Enter minimum 1 Quantity" />
+                    <lightning:input aura:id="campingitemform" label="Price" formatter="currency"
+                        name="campingitemprice" value="{!v.newItem.Price__c}" />
+                    <lightning:input type="checkbox" aura:id="campingitemform" label="Packed" name="campingitempacked"
+                        checked="{!v.newItem.Packed__c}" />
+                    <lightning:button label="Create Camping Item" class="slds-m-top--medium" variant="brand"
+                        onclick="{!c.clickCreateItem}" />
+                </form>
+            </fieldset>
+        </div>
+    </div>
+    <div class="slds-card slds-p-top--medium">
+        <c:campingHeader />
+        <div class="slds-col slds-col--padded slds-p-top--large">
+            <section class="slds-card__body">
+                <div id="list" class="row">
+                    <aura:iteration items="{!v.items}" var="item">
+                        <c:campingListItem item="{!item}" />
+                    </aura:iteration>
+                </div>
+            </section>
+        </div>
+    </div>
+</aura:component>
