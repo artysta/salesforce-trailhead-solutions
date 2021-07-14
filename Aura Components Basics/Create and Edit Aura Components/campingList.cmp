@@ -1,0 +1,8 @@
+<aura:component>
+    <ol>
+        <li>Bug</li>
+        <li>Spray</li>
+        <li>Bear Repellant</li>
+        <li>Goat Food</li>
+    </ol>
+</aura:component>
