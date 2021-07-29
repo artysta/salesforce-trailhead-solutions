@@ -1,0 +1,7 @@
+<apex:page >
+    <apex:pageBlock title="User Status">
+        <apex:pageBlockSection columns="1">
+            {! $User.FirstName }
+        </apex:pageBlockSection>
+    </apex:pageBlock>
+</apex:page>
