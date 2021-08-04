@@ -1,0 +1,31 @@
+<apex:page sidebar="false">
+<!--Flight Systems Checklist Visualforce Page-->
+   <h1>Station Status</h1>
+   <apex:form id="engineReadinessChecklist">
+      <apex:pageBlock title="Flight Systems Checklist">
+         <!--First Section-->
+         <apex:pageBlockSection title="Engines">
+            <!--Adding Checkboxes-->
+            <apex:inputCheckbox immediate="true"/>Engine 1
+            <apex:inputCheckbox immediate="true"/>Engine 2
+            <apex:inputCheckbox immediate="true"/>Engine 3
+            <apex:inputCheckbox immediate="true"/>Engine 4
+            <apex:inputCheckbox immediate="true"/>Engine 5
+            <apex:inputCheckbox immediate="true"/>Engine 6
+         </apex:pageBlockSection>
+         <!--Second Section-->
+         <apex:pageBlockSection title="Fuel Tanks">
+            <apex:inputCheckbox immediate="true"/>Tank 1
+            <apex:inputCheckbox immediate="true"/>Tank 2
+            <apex:inputCheckbox immediate="true"/>Tank 3
+            <apex:inputCheckbox immediate="true"/>Tank 4
+            <apex:inputCheckbox immediate="true"/>Tank 5
+            <apex:inputCheckbox immediate="true"/>Tank 6
+         </apex:pageBlockSection>
+         <apex:pageBlockButtons>
+            <!--Adding Save Button-->
+            <apex:commandButton value="Save" action="{!save}"/>
+         </apex:pageBlockButtons>
+      </apex:pageBlock>
+   </apex:form>
+</apex:page>
