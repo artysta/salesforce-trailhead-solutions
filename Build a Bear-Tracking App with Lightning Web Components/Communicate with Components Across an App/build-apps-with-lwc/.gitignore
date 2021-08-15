@@ -1,0 +1,7 @@
+**/__MACOSX
+**/.DS_Store
+**/jsconfig.json
+.sfdx
+.vscode
+.localdevserver
+node_modules
