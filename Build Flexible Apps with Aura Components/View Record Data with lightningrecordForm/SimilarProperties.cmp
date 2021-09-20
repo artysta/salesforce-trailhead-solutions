@@ -1,0 +1,33 @@
+<aura:component controller="MyPropertyController" implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    <aura:attribute name="recordId" type="Id"/>
+    <aura:attribute name="similarProperties" type="Object[]"/>
+    <aura:attribute name="property" type="Property__c"/>
+    <aura:attribute name="searchCriteria" type="String" default="Price"/>
+    <aura:attribute name="priceRange" type="String" default="100000"/>
+    <aura:handler event="c:RecordUpdated" action="{!c.doInit}"/>
+    <aura:handler name="init" value="{! this}" action="{!c.doInit}"/>
+    <force:recordData aura:id="propertyService"
+        recordId="{!v.recordId}"
+        targetRecord="{!v.property}"
+        recordUpdated="{!c.doInit}"
+        layoutType="FULL"/>
+    <lightning:card iconName="custom:custom85" title="{! 'Similar Properties by ' + v.searchCriteria}" class="slds-is-relative">
+        <div class="slds-p-left_medium slds-p-right_medium">
+            <ul class="slds-list_vertical slds-has-dividers_top-space">
+                <aura:if isTrue="{!v.similarProperties.length &gt; 0}">
+                    <aura:iteration items="{!v.similarProperties}" var="item">
+                        <li class="slds-list__item">
+                            <c:SimilarProperty property="{!item}"/>
+                        </li>
+                    </aura:iteration>
+                    <aura:set attribute="else">
+                        <li class="slds-list__item">
+                            <h3 class="slds-text-small slds-text-color_error">No similar properties found.</h3>
+                        </li>
+                    </aura:set>
+                </aura:if>
+            </ul>
+        </div>
+        <lightning:spinner aura:id="spinner" variant="brand" size="large"/>
+    </lightning:card>
+</aura:component>
