@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForRecordHome,force:hasRecordId" access="global">
+    <lightning:input aura:id="propName" name="propName" label="Property Name" required="true" />
+    <lightning:input aura:id="propBeds" name="propBeds" label="Beds" />
+    <lightning:input aura:id="propBaths" name="propBaths" label="Baths" />
+    <lightning:input aura:id="propPrice" name="propPrice" label="Price" />
+    <lightning:select aura:id="propStatus" name="propStatus" label="Status">
+        <option value="status">Status</option>
+    </lightning:select>
+    <lightning:button variant="neutral" label="Cancel" />
+    <lightning:button variant="brand" label="Submit" />
+</aura:component>
