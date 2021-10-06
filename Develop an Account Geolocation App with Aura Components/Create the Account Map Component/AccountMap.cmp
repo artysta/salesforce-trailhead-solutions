@@ -1,0 +1,7 @@
+<aura:component>
+    <aura:handler event="c:AccountsLoaded" action="{!c.onAccountsLoaded}" />
+    <aura:attribute name="mapMarkers" type="Map[]" />
+    <lightning:card title="Account Map" iconName="action:map">
+        <lightning:map mapMarkers="{!v.mapMarkers}" />
+    </lightning:card>
+</aura:component>

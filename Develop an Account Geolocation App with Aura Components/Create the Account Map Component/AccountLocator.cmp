@@ -1,0 +1,13 @@
+<aura:component implements="force:appHostable,flexipage:availableForAllPageTypes">
+    <lightning:layout horizontalAlign="space" multipleRows="true">
+        <lightning:layoutItem size="12" mediumDeviceSize="12" padding="around-small">
+            <c:AccountSearch />
+        </lightning:layoutItem>
+        <lightning:layoutItem size="12" mediumDeviceSize="6" padding="around-small">
+            <c:AccountList />
+        </lightning:layoutItem>
+        <lightning:layoutItem size="12" mediumDeviceSize="6" padding="around-small">
+            <c:AccountMap />
+        </lightning:layoutItem>
+    </lightning:layout>
+</aura:component>
