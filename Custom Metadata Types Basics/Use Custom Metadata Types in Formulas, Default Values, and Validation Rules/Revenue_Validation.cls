@@ -1,0 +1,1 @@
+AnnualRevenue > $CustomMetadata.Support_Tier__mdt.Gold.Minimum_Spending__c
