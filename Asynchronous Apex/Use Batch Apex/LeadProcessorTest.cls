@@ -4,15 +4,15 @@ private class LeadProcessorTest {
     private static void testLeadProcessor() {
         List<Lead> leads = new List<Lead>();
         
-		for (Integer i = 0; i < 200; i++) {
-			leads.add(
+        for (Integer i = 0; i < 200; i++) {
+            leads.add(
                 new Lead(
                     FirstName = 'Jack',
-					LastName = 'Shephard',
-					Company = 'Salesforce'
+                    LastName = 'Shephard',
+                    Company = 'Salesforce'
                 )
             );
-		}
+        }
         
         insert leads;
         
