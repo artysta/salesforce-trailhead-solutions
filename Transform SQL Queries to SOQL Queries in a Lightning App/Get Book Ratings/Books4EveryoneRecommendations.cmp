@@ -1,0 +1,27 @@
+<aura:component implements="flexipage:availableForAllPageTypes" access="global"
+    controller="Books4EveryoneHomeController">
+    <aura:attribute name="Recommendations" type="Recommendation__c" />
+    <aura:handler name="init" action="{!c.doInit}" value="{!this}" />
+    <lightning:card title="Books4Everyone Recommendations">
+        <aura:set attribute="body">
+            <table class="slds-table slds-table_bordered slds-table_cell-buffer">
+                <thead>
+                    <tr class="slds-text-title_caps">
+                        <th scope="col">Book Title</th>
+                        <th scope="col">Rating</th>
+                        <th scope="col">Review</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <aura:iteration items="{!v.Recommendations}" var="recommendations">
+                        <tr scope="row">
+                            <td> {!recommendations.Book__r.Name}</td>
+                            <td> {!recommendations.Rating__c}</td>
+                            <td> {!recommendations.Review__c}</td>
+                        </tr>
+                    </aura:iteration>
+                </tbody>
+            </table>
+        </aura:set>
+    </lightning:card>
+</aura:component>
