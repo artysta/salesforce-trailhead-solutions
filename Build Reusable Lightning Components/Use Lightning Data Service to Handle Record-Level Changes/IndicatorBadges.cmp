@@ -1,0 +1,17 @@
+<aura:component implements="force:hasRecordId,force:hasSObjectName,flexipage:availableForRecordHome" controller="INDICATOR_Controller" access="public">
+    <aura:attribute name="badgeList" type="object[]"/>
+    <aura:attribute name="objLabel" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}"/>
+    <force:recordData recordId="{!v.recordId}" layoutType="FULL" recordUpdated="{!c.doInit}"/>
+    <lightning:card iconName="standard:coaching" title="{! v.objLabel +' Indicators'}" class="slds-text-title_caps">
+        <div class="slds-p-left_medium slds-p-right_medium">
+            <lightning:layout verticalAlign="stretch" horizontalAlign="start" multipleRows="true" pullToBoundary="small">
+                <aura:iteration items="{!v.badgeList}" var="thisBadge" aura:id="theList">
+                    <lightning:layoutItem size="2" padding="horizontal-small">
+                        <c:IndicatorBadge badge="{!thisBadge}"/>
+                    </lightning:layoutItem>
+                </aura:iteration>
+            </lightning:layout>
+        </div>
+    </lightning:card>
+</aura:component>
