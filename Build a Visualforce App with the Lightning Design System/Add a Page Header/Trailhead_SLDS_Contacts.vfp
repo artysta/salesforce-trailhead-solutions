@@ -1,0 +1,52 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="x-ua-compatible" content="ie=edge" />
+            <title>Salesforce Lightning Design System Trailhead Module</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <!-- Import the Design System style sheet -->
+            <apex:slds />
+        </head>
+        <apex:remoteObjects >
+            <apex:remoteObjectModel name="Contact" fields="Id,Name,Title,LastModifiedDate,PhotoUrl"/>
+        </apex:remoteObjects>
+        <body>
+            <!-- REQUIRED SLDS WRAPPER -->
+            <div class="slds-scope">
+                <!-- MASTHEAD -->
+                <p class="slds-text-heading_label slds-m-bottom_small"> Salesforce Lightning Design System Visualforce Workshop </p>
+                <!-- / MASTHEAD -->
+                <!-- PAGE HEADER -->
+                <div class="slds-page-header">
+                    <!-- LAYOUT GRID -->
+                    <div class="slds-grid">
+                        <!-- GRID COL -->
+                        <div class="slds-col slds-has-flexi-truncate">
+                            <!-- HEADING AREA -->
+                            <p class="slds-text-title_caps slds-line-height_reset">Contacts</p>
+                            <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate"  title="My Contacts">My Contacts</h1>
+                            <!-- / HEADING AREA -->
+                        </div>
+                        <!-- ACTION BUTTONS -->
+                        <!-- / ACTION BUTTONS -->
+                    </div>
+                    <!-- / LAYOUT GRID -->
+                    <!-- PAGE HEADER DETAIL ROW -->
+                    <!-- / PAGE HEADER DETAIL ROW -->
+                </div>
+                <!-- / PAGE HEADER -->
+                <!-- PRIMARY CONTENT WRAPPER -->
+                <div class="myapp slds-p-horizontal_medium">
+                    <ul id="contact-list" class="slds-has-dividers_bottom-space"></ul>
+                </div>
+                <!-- / PRIMARY CONTENT WRAPPER -->
+                <!-- FOOTER -->
+                <!-- / FOOTER -->
+            </div>
+            <!-- / REQUIRED SLDS WRAPPER -->
+            <!-- JAVASCRIPT -->
+            <!-- / JAVASCRIPT -->
+        </body>
+    </html>
+</apex:page>
