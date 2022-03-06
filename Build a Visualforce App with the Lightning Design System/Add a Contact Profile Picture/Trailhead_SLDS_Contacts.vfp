@@ -1,0 +1,133 @@
+<apex:page showHeader="false" standardStylesheets="false" sidebar="false" applyHtmlTag="false" applyBodyTag="false" docType="html-5.0">
+    <html xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" lang="en">
+        <head>
+            <meta charset="utf-8" />
+            <meta http-equiv="x-ua-compatible" content="ie=edge" />
+            <title>Salesforce Lightning Design System Trailhead Module</title>
+            <meta name="viewport" content="width=device-width, initial-scale=1" />
+            <!-- Import the Design System style sheet -->
+            <apex:slds />
+        </head>
+        <apex:remoteObjects >
+            <apex:remoteObjectModel name="Contact" fields="Id,Name,Title,LastModifiedDate,PhotoUrl"/>
+        </apex:remoteObjects>
+        <body>
+            <!-- REQUIRED SLDS WRAPPER -->
+            <div class="slds-scope">
+                <!-- MASTHEAD -->
+                <p class="slds-text-heading_label slds-m-bottom_small"> Salesforce Lightning Design System Visualforce Workshop </p>
+                <!-- / MASTHEAD -->
+                <!-- PAGE HEADER -->
+                <div class="slds-page-header">
+                    <!-- LAYOUT GRID -->
+                    <div class="slds-grid">
+                        <!-- GRID COL -->
+                        <div class="slds-col slds-has-flexi-truncate">
+                            <!-- HEADING AREA -->
+                            <!-- MEDIA OBJECT = FIGURE + BODY -->
+                            <div class="slds-media slds-no-space slds-grow">
+                                <div class="slds-media__figure">
+                                    <svg aria-hidden="true" class="slds-icon slds-icon-standard-contact">
+                                        <use xlink:href="{!URLFOR($Asset.SLDS, 'assets/icons/standard-sprite/svg/symbols.svg#contact')}"></use>
+                                    </svg>
+                                </div>
+                                <div class="slds-media__body">
+                                    <p class="slds-text-title_caps slds-line-height_reset">Contacts</p>
+                                    <h1 class="slds-page-header__title slds-m-right_small slds-align-middle slds-truncate" title="My Contacts">My Contacts</h1>
+                                </div>
+                            </div>
+                            <!-- / MEDIA OBJECT -->
+                            <!-- /HEADING AREA -->
+                        </div>
+                        <!-- ACTION BUTTONS -->
+                        <div class="slds-col slds-no-flex slds-grid slds-align-top">
+                            <div class="slds-button-group" role="group">
+                                <button class="slds-button slds-button_neutral"> Add Contact </button>
+                                <button class="slds-button slds-button_neutral"> More </button>
+                            </div>
+                        </div>
+                        <!-- / ACTION BUTTONS -->
+                    </div>
+                    <!-- / LAYOUT GRID -->
+                    <!-- PAGE HEADER DETAIL ROW -->
+                    <ul class="slds-grid slds-page-header__detail-row">
+                        <li class="slds-page-header__detail-block">
+                            <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Field 1">Field 1</p>
+                            <p class="slds-text-body_regular slds-truncate" title="Description that demonstrates truncation with a long text field">Description that demonstrates truncation with a long text field.</p>
+                        </li>
+                        <li class="slds-page-header__detail-block">
+                            <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Field2 (3)">Field 2 (3)
+                                <button class="slds-button slds-button_icon" aria-haspopup="true" title="More actions">
+                                    <svg aria-hidden="true" class="slds-button__icon slds-button__icon_small">
+                                        <use xlink:href="/assets/icons/utility-sprite/svg/symbols.svg#down"></use>
+                                    </svg>
+                                    <span class="slds-assistive-text">More Actions</span>
+                                </button>
+                            </p>
+                            <p class="slds-text-body_regular">Multiple Values</p>
+                        </li>
+                        <li class="slds-page-header__detail-block">
+                            <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Field 3">Field 3</p>
+                            <a href="javascript:void(0);">Hyperlink</a>
+                        </li>
+                        <li class="slds-page-header__detail-block">
+                            <p class="slds-text-title slds-truncate slds-m-bottom_xx-small" title="Field 4">Field 4</p>
+                            <p>
+                                <span title="Description (2-line truncation—must use JS to truncate).">Description (2-line truncat...</span>
+                            </p>
+                        </li>
+                    </ul>
+                    <!-- / PAGE HEADER DETAIL ROW -->
+                </div>
+                <!-- / PAGE HEADER -->
+                <!-- PRIMARY CONTENT WRAPPER -->
+                <div class="myapp slds-p-horizontal_medium">
+                    <ul id="contact-list" class="slds-has-dividers_bottom-space"></ul>
+                </div>
+                <!-- / PRIMARY CONTENT WRAPPER -->
+                <!-- FOOTER -->
+                <!-- / FOOTER -->
+            </div>
+            <!-- / REQUIRED SLDS WRAPPER -->
+            <!-- JAVASCRIPT -->
+            <script>
+            (function () {
+                var contact = new SObjectModel.Contact();
+                var contactList = document.getElementById('contact-list');
+                /* FUNCTION createTile */
+                function createTile (record) {
+                    return [
+                        '<li class="slds-item">',
+                        	'<div class="slds-tile slds-media">',
+                        		'<div class="slds-media__figure">',
+                        			'<img class="slds-avatar slds-avatar_medium" src="', record.get('PhotoUrl'), '" alt="" />',
+                        		'</div>',
+                        		'<div class="slds-media__body">',
+                        			'<h3 class="slds-truncate" title="', record.get('Name'), '"><a href="javascript:void(0);">', record.get('Name') ,'</a></h3>',
+                        			'<div class="slds-tile__detail slds-text-body_small">',
+                        				'<p class="slds-truncate">', record.get('Title') ,'</p>',
+                        			'</div>',
+                        		'</div>',
+                        	'</div>',
+                        '</li>'
+                    ].join('');
+                }
+                /* FUNCTION createTile */
+                contact.retrieve({
+                    orderby: [{
+                        LastModifiedDate: 'DESC'
+                    }],
+                    limit: 810
+                }, function (error, records) {
+                    if (error) {
+                        alert(error.message);
+                    } else {
+                        contactList.innerHTML = records.map(createTile).join('');
+                    }
+                });
+            })();
+            </script>
+            <!-- JAVASCRIPT -->
+        </body>
+    </html>
+</apex:page>
