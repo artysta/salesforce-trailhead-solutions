@@ -1,0 +1,1 @@
+!(IsClosed) &&  TODAY() - CloseDate > 0
