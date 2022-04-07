@@ -1,0 +1,1 @@
+(TODAY() - DATEVALUE(CreatedDate)) / (CloseDate - DATEVALUE(CreatedDate))
