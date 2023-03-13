@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+  <types>
+    <name>Report</name>
+    <members>EinsteinBotReports_v2</members>
+    <members>unfiled$public</members>
+    <members>EBotR_v3</members>
+    <members>EinsteinBotReports</members>
+    <members>unfiled$public/flow_screen_prebuilt_report</members>
+    <members>unfiled$public/Opportunities_by_Stage</members>
+  </types>
+  <version>57.0</version>
+</Package>
