@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+  <types>
+    <name>Report</name>
+    <members>GlobalSalesReports</members>
+    <members>AdminLightningExperienceReports</members>
+    <members>MarketingReports</members>
+    <members>AdoptionReports</members>
+    <members>GlobalSalesReports/Opportunities_by_Rep_ieC</members>
+  </types>
+  <types>
+    <name>Dashboard</name>
+    <members>GlobalSalesDashboards</members>
+  </types>
+  <version>57.0</version>
+</Package>
