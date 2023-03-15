@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+  <types>
+    <name>Report</name>
+    <members>MarketingReports</members>
+    <members>AdminLightningExperienceReports</members>
+    <members>AdoptionReports</members>
+    <members>GlobalSalesReports</members>
+    <members>MarketingReports/Central_and_Eastern_Target_Accounts_PDU</members>
+    <members>AdoptionReports/Users_Not_Logged_in_Last_7_Days_ri2</members>
+    <members>GlobalSalesReports/Opportunities_by_Rep_and_Close_Month_RtW</members>
+    <members>GlobalSalesReports/Pipeline_Matrix_Report_Current_FQ_2cl</members>
+    <members>GlobalSalesReports/Opportunities_by_Rep_ieC</members>
+  </types>
+  <types>
+    <name>Dashboard</name>
+    <members>GlobalSalesDashboards</members>
+  </types>
+  <version>57.0</version>
+</Package>
