@@ -1,0 +1,1 @@
+System.debug(HouseService.getRecords());
