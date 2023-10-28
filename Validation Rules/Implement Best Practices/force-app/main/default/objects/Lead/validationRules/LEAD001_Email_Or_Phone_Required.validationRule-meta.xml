@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LEAD001_Email_Or_Phone_Required</fullName>
+    <active>true</active>
+    <description>Either Email or Phone are required.</description>
+    <errorConditionFormula>AND(
+    OR(
+        ISNEW(),
+        ISCHANGED(Email),
+        ISCHANGED(Phone)
+    ),
+    ISBLANK(Email),
+    ISBLANK(Phone)
+)</errorConditionFormula>
+    <errorMessage>Either Email or Phone are required [LEAD001]</errorMessage>
+</ValidationRule>
