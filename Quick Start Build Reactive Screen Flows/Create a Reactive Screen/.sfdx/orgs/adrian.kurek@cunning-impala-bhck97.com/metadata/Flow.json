@@ -1,0 +1,44 @@
+{
+  "status": 0,
+  "result": [
+    {
+      "createdById": "005d2000006gRA1AAM",
+      "createdByName": "Adrian Kurek",
+      "createdDate": "2025-04-28T08:40:37.000Z",
+      "fileName": "flows/New_Bug_Case.flow",
+      "fullName": "New_Bug_Case",
+      "id": "301d200000RPa0mAAD",
+      "lastModifiedById": "005d2000006gRA1AAM",
+      "lastModifiedByName": "Adrian Kurek",
+      "lastModifiedDate": "2025-04-28T08:40:38.000Z",
+      "manageableState": "unmanaged",
+      "type": "Flow"
+    },
+    {
+      "createdById": "005d2000006gRA1AAM",
+      "createdByName": "Adrian Kurek",
+      "createdDate": "2025-04-28T07:04:55.000Z",
+      "fileName": "flows/net_promoter_score.flow",
+      "fullName": "net_promoter_score",
+      "id": "301d200000RPMCUAA5",
+      "lastModifiedById": "005d2000006gRA1AAM",
+      "lastModifiedByName": "Adrian Kurek",
+      "lastModifiedDate": "2025-04-28T07:04:55.000Z",
+      "manageableState": "unmanaged",
+      "type": "Flow"
+    },
+    {
+      "createdById": "005d2000006gRA1AAM",
+      "createdByName": "Adrian Kurek",
+      "createdDate": "2025-04-28T07:04:55.000Z",
+      "fileName": "flows/customer_satisfaction.flow",
+      "fullName": "customer_satisfaction",
+      "id": "301d200000RPMCVAA5",
+      "lastModifiedById": "005d2000006gRA1AAM",
+      "lastModifiedByName": "Adrian Kurek",
+      "lastModifiedDate": "2025-04-28T07:04:55.000Z",
+      "manageableState": "unmanaged",
+      "type": "Flow"
+    }
+  ]
+}
