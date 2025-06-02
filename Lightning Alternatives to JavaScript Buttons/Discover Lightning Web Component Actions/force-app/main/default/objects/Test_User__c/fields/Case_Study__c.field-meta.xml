@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Case_Study__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <label>Case Study</label>
+    <referenceTo>Case_Study__c</referenceTo>
+    <relationshipLabel>Test Users</relationshipLabel>
+    <relationshipName>Test_Users</relationshipName>
+    <required>false</required>
+    <trackTrending>false</trackTrending>
+    <type>Lookup</type>
+</CustomField>

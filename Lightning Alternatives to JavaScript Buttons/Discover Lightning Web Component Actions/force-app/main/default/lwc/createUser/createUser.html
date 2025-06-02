@@ -1,0 +1,49 @@
+<template>
+ <lightning-quick-action-panel header="Add Test User to Case Study">
+     <lightning-input
+             type="text"
+             data-field="firstName"
+             label="User's First Name"
+             onblur={updateNickName}
+             required
+     ></lightning-input>
+     <lightning-input
+             type="text"
+             data-field="lastName"
+             label="User's Last Name"
+             required
+     ></lightning-input>
+     <lightning-input
+             type="text"
+             data-field="nickName"
+             label="Nickname"
+             required
+     ></lightning-input>
+     <lightning-input
+             type="email"
+             data-field="email"
+             label="User's Email"
+             onblur={handleEmailBlur}
+             required
+     ></lightning-input>
+     <lightning-input
+             type="password"
+             data-field="password"
+             label="User's Password"
+             onblur={handlePasswordBlur}
+             required
+     ></lightning-input>
+     <div slot="footer">
+         <lightning-button
+                 variant="neutral"
+                 label="Cancel"
+                 onclick={handleCancel}
+         ></lightning-button>
+         <lightning-button
+                 variant="brand"
+                 label="Save User"
+                 onclick={handleSave}
+         ></lightning-button>
+     </div>
+ </lightning-quick-action-panel>
+</template>

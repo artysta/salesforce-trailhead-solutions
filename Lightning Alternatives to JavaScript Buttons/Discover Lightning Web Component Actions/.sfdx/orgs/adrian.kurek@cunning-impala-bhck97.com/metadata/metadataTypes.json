@@ -1,0 +1,1397 @@
+{
+  "status": 0,
+  "result": {
+    "metadataObjects": [
+      {
+        "directoryName": "installedPackages",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "installedPackage",
+        "xmlName": "InstalledPackage",
+        "childXmlNames": []
+      },
+      {
+        "childXmlNames": [
+          "CustomLabel"
+        ],
+        "directoryName": "labels",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "labels",
+        "xmlName": "CustomLabels"
+      },
+      {
+        "directoryName": "staticresources",
+        "inFolder": false,
+        "metaFile": true,
+        "suffix": "resource",
+        "xmlName": "StaticResource",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "scontrols",
+        "inFolder": false,
+        "metaFile": true,
+        "suffix": "scf",
+        "xmlName": "Scontrol",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "certs",
+        "inFolder": false,
+        "metaFile": true,
+        "suffix": "crt",
+        "xmlName": "Certificate",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "messageChannels",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "messageChannel",
+        "xmlName": "LightningMessageChannel",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "lwc",
+        "inFolder": false,
+        "metaFile": false,
+        "xmlName": "LightningComponentBundle",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "aura",
+        "inFolder": false,
+        "metaFile": false,
+        "xmlName": "AuraDefinitionBundle",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "components",
+        "inFolder": false,
+        "metaFile": true,
+        "suffix": "component",
+        "xmlName": "ApexComponent",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "pages",
+        "inFolder": false,
+        "metaFile": true,
+        "suffix": "page",
+        "xmlName": "ApexPage",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "queues",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "queue",
+        "xmlName": "Queue",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "inboundNetworkConnections",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "inboundNetworkConnection",
+        "xmlName": "InboundNetworkConnection",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "outboundNetworkConnections",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "outboundNetworkConnection",
+        "xmlName": "OutboundNetworkConnection",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "externalAuthIdentityProviders",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "externalAuthIdentityProvider",
+        "xmlName": "ExternalAuthIdentityProvider",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "externalCredentials",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "externalCredential",
+        "xmlName": "ExternalCredential",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "namedCredentials",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "namedCredential",
+        "xmlName": "NamedCredential",
+        "childXmlNames": []
+      },
+      {
+        "childXmlNames": [
+          "ExternalDataSrcDescriptor"
+        ],
+        "directoryName": "dataSources",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "dataSource",
+        "xmlName": "ExternalDataSource"
+      },
+      {
+        "directoryName": "externalServiceRegistrations",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "externalServiceRegistration",
+        "xmlName": "ExternalServiceRegistration",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "roles",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "role",
+        "xmlName": "Role",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "groups",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "group",
+        "xmlName": "Group",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "globalValueSets",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "globalValueSet",
+        "xmlName": "GlobalValueSet",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "standardValueSets",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "standardValueSet",
+        "xmlName": "StandardValueSet",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "customPermissions",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "customPermission",
+        "xmlName": "CustomPermission",
+        "childXmlNames": []
+      },
+      {
+        "childXmlNames": [
+          "CustomField",
+          "Index",
+          "BusinessProcess",
+          "RecordType",
+          "CompactLayout",
+          "WebLink",
+          "ValidationRule",
+          "SharingReason",
+          "ListView",
+          "FieldSet"
+        ],
+        "directoryName": "objects",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "object",
+        "xmlName": "CustomObject"
+      },
+      {
+        "directoryName": "reportTypes",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "reportType",
+        "xmlName": "ReportType",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "reports",
+        "inFolder": true,
+        "metaFile": false,
+        "suffix": "report",
+        "xmlName": "Report",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "dashboards",
+        "inFolder": true,
+        "metaFile": false,
+        "suffix": "dashboard",
+        "xmlName": "Dashboard",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "analyticSnapshots",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "snapshot",
+        "xmlName": "AnalyticSnapshot",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "feedFilters",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "feedFilter",
+        "xmlName": "CustomFeedFilter",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "layouts",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "layout",
+        "xmlName": "Layout",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "documents",
+        "inFolder": true,
+        "metaFile": true,
+        "xmlName": "Document",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "weblinks",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "weblink",
+        "xmlName": "CustomPageWebLink",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "letterhead",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "letter",
+        "xmlName": "Letterhead",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "email",
+        "inFolder": true,
+        "metaFile": true,
+        "suffix": "email",
+        "xmlName": "EmailTemplate",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "quickActions",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "quickAction",
+        "xmlName": "QuickAction",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "uiFormatSpecificationSets",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "uiFormatSpecificationSet",
+        "xmlName": "UiFormatSpecificationSet",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "flexipages",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "flexipage",
+        "xmlName": "FlexiPage",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "tabs",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "tab",
+        "xmlName": "CustomTab",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "customApplicationComponents",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "customApplicationComponent",
+        "xmlName": "CustomApplicationComponent",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "applications",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "app",
+        "xmlName": "CustomApplication",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "customMetadata",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "md",
+        "xmlName": "CustomMetadata",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "flows",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "flow",
+        "xmlName": "Flow",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "flowDefinitions",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "flowDefinition",
+        "xmlName": "FlowDefinition",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "flowtests",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "flowtest",
+        "xmlName": "FlowTest",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "processflowmigrations",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "processflowmigration",
+        "xmlName": "ProcessFlowMigration",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "contentassets",
+        "inFolder": false,
+        "metaFile": true,
+        "suffix": "asset",
+        "xmlName": "ContentAsset",
+        "childXmlNames": []
+      },
+      {
+        "childXmlNames": [
+          "WorkflowFieldUpdate",
+          "WorkflowKnowledgePublish",
+          "WorkflowTask",
+          "WorkflowAlert",
+          "WorkflowSend",
+          "WorkflowOutboundMessage",
+          "WorkflowFlowAutomation",
+          "WorkflowRule"
+        ],
+        "directoryName": "workflows",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "workflow",
+        "xmlName": "Workflow"
+      },
+      {
+        "childXmlNames": [
+          "AssignmentRule"
+        ],
+        "directoryName": "assignmentRules",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "assignmentRules",
+        "xmlName": "AssignmentRules"
+      },
+      {
+        "childXmlNames": [
+          "AutoResponseRule"
+        ],
+        "directoryName": "autoResponseRules",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "autoResponseRules",
+        "xmlName": "AutoResponseRules"
+      },
+      {
+        "childXmlNames": [
+          "EscalationRule"
+        ],
+        "directoryName": "escalationRules",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "escalationRules",
+        "xmlName": "EscalationRules"
+      },
+      {
+        "directoryName": "postTemplates",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "postTemplate",
+        "xmlName": "PostTemplate",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "approvalProcesses",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "approvalProcess",
+        "xmlName": "ApprovalProcess",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "homePageComponents",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "homePageComponent",
+        "xmlName": "HomePageComponent",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "homePageLayouts",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "homePageLayout",
+        "xmlName": "HomePageLayout",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "objectTranslations",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "objectTranslation",
+        "xmlName": "CustomObjectTranslation",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "translations",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "translation",
+        "xmlName": "Translations",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "globalValueSetTranslations",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "globalValueSetTranslation",
+        "xmlName": "GlobalValueSetTranslation",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "standardValueSetTranslations",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "standardValueSetTranslation",
+        "xmlName": "StandardValueSetTranslation",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "dw",
+        "inFolder": false,
+        "metaFile": true,
+        "suffix": "dwl",
+        "xmlName": "DataWeaveResource",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "classes",
+        "inFolder": false,
+        "metaFile": true,
+        "suffix": "cls",
+        "xmlName": "ApexClass",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "triggers",
+        "inFolder": false,
+        "metaFile": true,
+        "suffix": "trigger",
+        "xmlName": "ApexTrigger",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "testSuites",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "testSuite",
+        "xmlName": "ApexTestSuite",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "profiles",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "profile",
+        "xmlName": "Profile",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "permissionsets",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "permissionset",
+        "xmlName": "PermissionSet",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "mutingpermissionsets",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "mutingpermissionset",
+        "xmlName": "MutingPermissionSet",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "permissionsetgroups",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "permissionsetgroup",
+        "xmlName": "PermissionSetGroup",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "profilePasswordPolicies",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "profilePasswordPolicy",
+        "xmlName": "ProfilePasswordPolicy",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "profileSessionSettings",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "profileSessionSetting",
+        "xmlName": "ProfileSessionSetting",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "myDomainDiscoverableLogins",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "myDomainDiscoverableLogin",
+        "xmlName": "MyDomainDiscoverableLogin",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "blacklistedConsumers",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "blacklistedConsumer",
+        "xmlName": "BlacklistedConsumer",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "oauthcustomscopes",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "oauthcustomscope",
+        "xmlName": "OauthCustomScope",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "oauthtokenexchangehandlers",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "oauthtokenexchangehandler",
+        "xmlName": "OauthTokenExchangeHandler",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "userProvisioningConfigs",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "userProvisioningConfig",
+        "xmlName": "UserProvisioningConfig",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "notificationtypes",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "notiftype",
+        "xmlName": "CustomNotificationType",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "externalClientApps",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "eca",
+        "xmlName": "ExternalClientApplication",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "extlClntAppOauthSettings",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "ecaOauth",
+        "xmlName": "ExtlClntAppOauthSettings",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "extlClntAppGlobalOauthSets",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "ecaGlblOauth",
+        "xmlName": "ExtlClntAppGlobalOauthSettings",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "extlClntAppOauthPolicies",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "ecaOauthPlcy",
+        "xmlName": "ExtlClntAppOauthConfigurablePolicies",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "extlClntAppPolicies",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "ecaPlcy",
+        "xmlName": "ExtlClntAppConfigurablePolicies",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "extlClntAppSamlConfigurablePolicies",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "ecaSamlPlcy",
+        "xmlName": "ExtlClntAppSamlConfigurablePolicies",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "datacategorygroups",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "datacategorygroup",
+        "xmlName": "DataCategoryGroup",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "remoteSiteSettings",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "remoteSite",
+        "xmlName": "RemoteSiteSetting",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "cspTrustedSites",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "cspTrustedSite",
+        "xmlName": "CspTrustedSite",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "redirectWhitelistUrls",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "redirectWhitelistUrl",
+        "xmlName": "RedirectWhitelistUrl",
+        "childXmlNames": []
+      },
+      {
+        "childXmlNames": [
+          "MatchingRule"
+        ],
+        "directoryName": "matchingRules",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "matchingRule",
+        "xmlName": "MatchingRules"
+      },
+      {
+        "directoryName": "duplicateRules",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "duplicateRule",
+        "xmlName": "DuplicateRule",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "cleanDataServices",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "cleanDataService",
+        "xmlName": "CleanDataService",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "customindex",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "indx",
+        "xmlName": "CustomIndex",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "authproviders",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "authprovider",
+        "xmlName": "AuthProvider",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "eclair",
+        "inFolder": false,
+        "metaFile": true,
+        "suffix": "geodata",
+        "xmlName": "EclairGeoData",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "wave",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "collection",
+        "xmlName": "WaveAnalyticAssetCollection",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "appTemplates",
+        "inFolder": false,
+        "metaFile": false,
+        "xmlName": "AppFrameworkTemplateBundle",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "IPAddressRanges",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "IPAddressRange",
+        "xmlName": "IPAddressRange",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "apexEmailNotifications",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "notifications",
+        "xmlName": "ApexEmailNotifications",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "channelLayouts",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "channelLayout",
+        "xmlName": "ChannelLayout",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "sites",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "site",
+        "xmlName": "CustomSite",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "briefcaseDefinitions",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "briefcaseDefinition",
+        "xmlName": "BriefcaseDefinition",
+        "childXmlNames": []
+      },
+      {
+        "childXmlNames": [
+          "SharingOwnerRule",
+          "SharingCriteriaRule",
+          "SharingGuestRule"
+        ],
+        "directoryName": "sharingRules",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "sharingRules",
+        "xmlName": "SharingRules"
+      },
+      {
+        "directoryName": "sharingSets",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "sharingSet",
+        "xmlName": "SharingSet",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "iframeWhiteListUrlSettings",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "iframeWhiteListUrlSettings",
+        "xmlName": "IframeWhiteListUrlSettings",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "communities",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "community",
+        "xmlName": "Community",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "ChatterExtensions",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "ChatterExtension",
+        "xmlName": "ChatterExtension",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "aiApplications",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "ai",
+        "xmlName": "AIApplication",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "aiApplicationConfigs",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "aiapplicationconfig",
+        "xmlName": "AIApplicationConfig",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "mlPredictions",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "mlPrediction",
+        "xmlName": "MLPredictionDefinition",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "mlRecommendations",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "mlRecommendation",
+        "xmlName": "MLRecommendationDefinition",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "mlDataDefinitions",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "mlDataDefinition",
+        "xmlName": "MLDataDefinition",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "batchProcessJobDefinitions",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "batchProcessJobDefinition",
+        "xmlName": "BatchProcessJobDefinition",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "platformEventChannels",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "platformEventChannel",
+        "xmlName": "PlatformEventChannel",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "platformEventChannelMembers",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "platformEventChannelMember",
+        "xmlName": "PlatformEventChannelMember",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "eventRelays",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "eventRelay",
+        "xmlName": "EventRelayConfig",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "managedEventSubscriptions",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "managedEventSubscription",
+        "xmlName": "ManagedEventSubscription",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "callCenters",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "callCenter",
+        "xmlName": "CallCenter",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "milestoneTypes",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "milestoneType",
+        "xmlName": "MilestoneType",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "entitlementProcesses",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "entitlementProcess",
+        "xmlName": "EntitlementProcess",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "entitlementTemplates",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "entitlementTemplate",
+        "xmlName": "EntitlementTemplate",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "PublicKeyCertificate",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "PublicKeyCertificate",
+        "xmlName": "PublicKeyCertificate",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "PublicKeyCertificateSet",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "PublicKeyCertificateSet",
+        "xmlName": "PublicKeyCertificateSet",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "messagingChannels",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "messagingChannel",
+        "xmlName": "MessagingChannel",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "Canvases",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "Canvas",
+        "xmlName": "CanvasMetadata",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "MobileApplicationDetails",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "MobileApplicationDetail",
+        "xmlName": "MobileApplicationDetail",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "connectedApps",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "connectedApp",
+        "xmlName": "ConnectedApp",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "appMenus",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "appMenu",
+        "xmlName": "AppMenu",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "notificationTypeConfig",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "config",
+        "xmlName": "NotificationTypeConfig",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "delegateGroups",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "delegateGroup",
+        "xmlName": "DelegateGroup",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "brandingSets",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "brandingSet",
+        "xmlName": "BrandingSet",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "managedContentTypes",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "managedContentType",
+        "xmlName": "ManagedContentType",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "experiencePropertyTypeBundles",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "experiencePropertyTypeBundle",
+        "xmlName": "ExperiencePropertyTypeBundle",
+        "childXmlNames": []
+      },
+      {
+        "childXmlNames": [
+          "DigitalExperience"
+        ],
+        "directoryName": "digitalExperiences",
+        "inFolder": false,
+        "metaFile": true,
+        "suffix": "digitalExperience",
+        "xmlName": "DigitalExperienceBundle"
+      },
+      {
+        "directoryName": "siteDotComSites",
+        "inFolder": false,
+        "metaFile": true,
+        "suffix": "site",
+        "xmlName": "SiteDotCom",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "experienceContainers",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "experienceContainer",
+        "xmlName": "ExperienceContainer",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "networkBranding",
+        "inFolder": false,
+        "metaFile": true,
+        "suffix": "networkBranding",
+        "xmlName": "NetworkBranding",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "flowCategories",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "flowCategory",
+        "xmlName": "FlowCategory",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "lightningBolts",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "lightningBolt",
+        "xmlName": "LightningBolt",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "lightningExperienceThemes",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "lightningExperienceTheme",
+        "xmlName": "LightningExperienceTheme",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "lightningOnboardingConfigs",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "lightningOnboardingConfig",
+        "xmlName": "LightningOnboardingConfig",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "customHelpMenuSections",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "customHelpMenuSection",
+        "xmlName": "CustomHelpMenuSection",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "prompts",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "prompt",
+        "xmlName": "Prompt",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "samlssoconfigs",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "samlssoconfig",
+        "xmlName": "SamlSsoConfig",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "corsWhitelistOrigins",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "corsWhitelistOrigin",
+        "xmlName": "CorsWhitelistOrigin",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "actionLinkGroupTemplates",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "actionLinkGroupTemplate",
+        "xmlName": "ActionLinkGroupTemplate",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "transactionSecurityPolicies",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "transactionSecurityPolicy",
+        "xmlName": "TransactionSecurityPolicy",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "conversationMessageDefinitions",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "conversationMessageDefinition",
+        "xmlName": "ConversationMessageDefinition",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "synonymDictionaries",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "synonymDictionary",
+        "xmlName": "SynonymDictionary",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "pathAssistants",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "pathAssistant",
+        "xmlName": "PathAssistant",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "animationRules",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "animationRule",
+        "xmlName": "AnimationRule",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "LeadConvertSettings",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "LeadConvertSetting",
+        "xmlName": "LeadConvertSettings",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "liveChatSensitiveDataRule",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "liveChatSensitiveDataRule",
+        "xmlName": "LiveChatSensitiveDataRule",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "cachePartitions",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "cachePartition",
+        "xmlName": "PlatformCachePartition",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "topicsForObjects",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "topicsForObjects",
+        "xmlName": "TopicsForObjects",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "restrictionRules",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "rule",
+        "xmlName": "RestrictionRule",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "fieldRestrictionRules",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "rule",
+        "xmlName": "FieldRestrictionRule",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "recommendationStrategies",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "recommendationStrategy",
+        "xmlName": "RecommendationStrategy",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "emailservices",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "xml",
+        "xmlName": "EmailServicesFunction",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "paymentGatewayProviders",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "paymentGatewayProvider",
+        "xmlName": "PaymentGatewayProvider",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "gatewayProviderPaymentMethodTypes",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "gatewayProviderPaymentMethodType",
+        "xmlName": "GatewayProviderPaymentMethodType",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "ActionLauncherItemDef",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "actionLauncherItemDef",
+        "xmlName": "ActionLauncherItemDef",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "recordActionDeployments",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "deployment",
+        "xmlName": "RecordActionDeployment",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "ChoiceList",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "ChoiceList",
+        "xmlName": "ChoiceList",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "EmbeddedServiceConfig",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "EmbeddedServiceConfig",
+        "xmlName": "EmbeddedServiceConfig",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "EmbeddedServiceBranding",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "EmbeddedServiceBranding",
+        "xmlName": "EmbeddedServiceBranding",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "EmbeddedServiceFlowConfig",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "EmbeddedServiceFlowConfig",
+        "xmlName": "EmbeddedServiceFlowConfig",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "EmbeddedServiceMenuSettings",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "EmbeddedServiceMenuSettings",
+        "xmlName": "EmbeddedServiceMenuSettings",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "callCoachingMediaProviders",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "callCoachingMediaProvider",
+        "xmlName": "CallCoachingMediaProvider",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "ConvIntelligenceSignalRule",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "ConvIntelligenceSignalRule",
+        "xmlName": "ConvIntelligenceSignalRule",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "searchCustomizations",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "searchCustomization",
+        "xmlName": "SearchCustomization",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "searchOrgWideConfiguration",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "searchOrgWideObjectConfig",
+        "xmlName": "SearchOrgWideObjectConfig",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "PlatformEventSubscriberConfigs",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "platformEventSubscriberConfig",
+        "xmlName": "PlatformEventSubscriberConfig",
+        "childXmlNames": []
+      },
+      {
+        "directoryName": "settings",
+        "inFolder": false,
+        "metaFile": false,
+        "suffix": "settings",
+        "xmlName": "Settings",
+        "childXmlNames": []
+      }
+    ],
+    "organizationNamespace": "",
+    "partialSaveAllowed": true,
+    "testRequired": false
+  },
+  "warnings": []
+}
