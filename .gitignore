@@ -8,6 +8,8 @@
 .localdevserver/
 deploy-options.json
 
+.forceignore
+
 # LWC VSCode autocomplete
 **/lwc/jsconfig.json
 
