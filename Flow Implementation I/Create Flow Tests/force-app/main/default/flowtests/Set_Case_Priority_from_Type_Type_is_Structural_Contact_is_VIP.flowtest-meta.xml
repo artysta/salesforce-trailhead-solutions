@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FlowTest xmlns="http://soap.sforce.com/2006/04/metadata">
+    <flowApiName>Set_Case_Priority_from_Type</flowApiName>
+    <label>Type is Structural, Contact is VIP</label>
+    <testPoints>
+        <elementApiName>Start</elementApiName>
+        <parameters>
+            <leftValueReference>$Record</leftValueReference>
+            <type>InputTriggeringRecordInitial</type>
+            <value>
+                <sobjectValue>{&quot;ContactId&quot;:&quot;003d200000KoofoAAB&quot;,&quot;IsEscalated&quot;:false,&quot;OwnerId&quot;:&quot;005d2000006gRA1AAM&quot;,&quot;Priority&quot;:&quot;Medium&quot;,&quot;Status&quot;:&quot;New&quot;,&quot;Type&quot;:&quot;Structural&quot;}</sobjectValue>
+            </value>
+        </parameters>
+    </testPoints>
+    <testPoints>
+        <assertions>
+            <conditions>
+                <leftValueReference>Set_to_Medium</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <errorMessage>The flow didn&apos;t follow the Set to Medium path.</errorMessage>
+        </assertions>
+        <assertions>
+            <conditions>
+                <leftValueReference>$Record.Priority</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Medium</stringValue>
+                </rightValue>
+            </conditions>
+            <errorMessage>Priority wasn&apos;t changed to Medium.</errorMessage>
+        </assertions>
+        <elementApiName>Finish</elementApiName>
+    </testPoints>
+</FlowTest>
