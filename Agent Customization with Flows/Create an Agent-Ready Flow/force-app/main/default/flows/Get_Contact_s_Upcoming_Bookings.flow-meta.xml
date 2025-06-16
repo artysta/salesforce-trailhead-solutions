@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Gives error message text to the Error_Message_Output variable, to present to the customer if this flow fails.</description>
+        <name>Set_the_Error_Message_Output</name>
+        <label>Set the Error Message Output</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>Error_Message_Output</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>I&apos;m sorry, I&apos;m having a problem finding your booked activities. Would you like to speak to our support team?</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>Find all the Booking records related to the guest&apos;s contact record. Only retrieve Bookings whose date hasn&apos;t occurred yet.</description>
+    <environments>Default</environments>
+    <interviewLabel>Get Contact&apos;s Upcoming Bookings {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Get Contact&apos;s Upcoming Bookings</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Retrieves all upcoming bookings assigned to the found contact that have not been canceled. The bookings are stored in the Contact_Bookings variable.</description>
+        <name>Get_Contact_s_Upcoming_Bookings</name>
+        <label>Get Contact&apos;s Upcoming Bookings</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <faultConnector>
+            <targetReference>Set_the_Error_Message_Output</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Contact__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Contact_ID</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Date__c</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <elementReference>$Flow.CurrentDate</elementReference>
+            </value>
+        </filters>
+        <filters>
+            <field>Is_Canceled__c</field>
+            <operator>EqualTo</operator>
+            <value>
+                <booleanValue>false</booleanValue>
+            </value>
+        </filters>
+        <object>Booking__c</object>
+        <outputReference>Contact_Bookings</outputReference>
+        <queriedFields>Experience_Name__c</queriedFields>
+        <queriedFields>Date__c</queriedFields>
+        <queriedFields>Start_Time__c</queriedFields>
+        <queriedFields>End_Time__c</queriedFields>
+        <sortField>Date__c</sortField>
+        <sortOrder>Asc</sortOrder>
+    </recordLookups>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Contact_s_Upcoming_Bookings</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>The upcoming not-canceled bookings assigned to the contact whose ID matches the Contact_ID.</description>
+        <name>Contact_Bookings</name>
+        <dataType>SObject</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Booking__c</objectType>
+    </variables>
+    <variables>
+        <description>The Id of a Contact record that you would like to find related Booking records for.</description>
+        <name>Contact_ID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>The error message to show to the customer when this flow doesn&apos;t finish successfully.</description>
+        <name>Error_Message_Output</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+</Flow>
