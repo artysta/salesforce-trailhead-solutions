@@ -1,0 +1,14 @@
+{
+  "required" : [ "Contact_ID" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "Contact_ID" : {
+      "title" : "Contact_ID",
+      "description" : "The Id of a Contact record that you would like to find related Booking records for.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : false
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}

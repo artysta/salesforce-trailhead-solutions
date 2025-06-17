@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>64.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <assignments>
+        <description>Gives error message text to the Error_Message_Output variable, to present to the customer if this flow fails.</description>
+        <name>Set_the_Error_Message_Output</name>
+        <label>Set the Error Message Output</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>Error_Message_Output</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <stringValue>I&apos;m sorry, I&apos;m having a problem canceling that activity booking. Would you like to speak to our support team?</stringValue>
+            </value>
+        </assignmentItems>
+    </assignments>
+    <description>With the Booking record&apos;s ID, update the Booking record that the customer has chosen so that it is canceled.</description>
+    <environments>Default</environments>
+    <interviewLabel>Cancel Contact&apos;s Booking {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Cancel Contact&apos;s Booking</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordLookups>
+        <description>Retrieve the details of the activity booking record that was canceled, so they can be presented to the customer.</description>
+        <name>Get_Updated_Booking_Details</name>
+        <label>Get Updated Booking Details</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
+        <faultConnector>
+            <isGoTo>true</isGoTo>
+            <targetReference>Set_the_Error_Message_Output</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Booking_ID</elementReference>
+            </value>
+        </filters>
+        <object>Booking__c</object>
+        <outputReference>Updated_Booking_Record</outputReference>
+        <queriedFields>Experience_Name__c</queriedFields>
+        <queriedFields>Date__c</queriedFields>
+        <queriedFields>Start_Time__c</queriedFields>
+        <queriedFields>Is_Canceled__c</queriedFields>
+    </recordLookups>
+    <recordUpdates>
+        <description>Update the booking record so that it&apos;s canceled. This sets the field Is Canceled to TRUE.</description>
+        <name>Cancel_Selected_Booking</name>
+        <label>Cancel Selected Booking</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Get_Updated_Booking_Details</targetReference>
+        </connector>
+        <faultConnector>
+            <targetReference>Set_the_Error_Message_Output</targetReference>
+        </faultConnector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Id</field>
+            <operator>EqualTo</operator>
+            <value>
+                <elementReference>Booking_ID</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Is_Canceled__c</field>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </inputAssignments>
+        <object>Booking__c</object>
+    </recordUpdates>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Cancel_Selected_Booking</targetReference>
+        </connector>
+    </start>
+    <status>Active</status>
+    <variables>
+        <description>The ID of the activity booking record that the customer wants to cancel.</description>
+        <name>Booking_ID</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+    </variables>
+    <variables>
+        <description>The error message to show to the customer when this flow doesn&apos;t finish successfully.</description>
+        <name>Error_Message_Output</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <description>The activity&apos;s booking record after it has been canceled. Present this data to the customer when the action is complete.</description>
+        <name>Updated_Booking_Record</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Booking__c</objectType>
+    </variables>
+</Flow>

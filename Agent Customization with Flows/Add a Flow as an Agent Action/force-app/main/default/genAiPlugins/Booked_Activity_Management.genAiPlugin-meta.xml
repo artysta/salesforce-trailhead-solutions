@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenAiPlugin xmlns="http://soap.sforce.com/2006/04/metadata">
+    <canEscalate>false</canEscalate>
+    <description>This topic helps Coral Cloud Resort guests to manage and understand their booked activities. Booked activities are stored in the &apos;Bookings&apos; object in Salesforce. Guests are represented by the &apos;Contacts&apos; object in Salesforce.</description>
+    <developerName>Booked_Activity_Management</developerName>
+    <genAiFunctions>
+        <functionName>Get_Customer_Details</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Get_Contact_s_Upcoming_Bookings</functionName>
+    </genAiFunctions>
+    <genAiFunctions>
+        <functionName>Cancel_Contact_s_Booking</functionName>
+    </genAiFunctions>
+    <genAiPluginInstructions>
+        <description>After showing the customer a list of their activities, ask them how you can help them.</description>
+        <developerName>instruction_aftershowi0</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_aftershowi0</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the customer is not known, you must always ask for their email address and their membership number to get their Contact record by running the Get_Customer_Details action before running any other actions.</description>
+        <developerName>instruction_ifthecusto1</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifthecusto1</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the customer asks what their current booked activities are, run the Get_Contact_s_Upcoming_Bookings action and then present the output to the customer.</description>
+        <developerName>instruction_ifthecusto2</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifthecusto2</masterLabel>
+    </genAiPluginInstructions>
+    <genAiPluginInstructions>
+        <description>If the customer asks to cancel a booked activity, you should run the Get_Contact_s_Upcoming_Bookings action. Always present the list of upcoming bookings to the customer. Then you must ask the customer which booked activity they want to cancel. When the customer tells you which activity they want to cancel, run the Cancel_Contact_s_Booking action and pass the Booking&apos;s ID to the Booking_ID variable. Then present the information from the Updated_Booking_Record variable to the customer.</description>
+        <developerName>instruction_ifthecusto3</developerName>
+        <language>en_US</language>
+        <masterLabel>instruction_ifthecusto3</masterLabel>
+    </genAiPluginInstructions>
+    <language>en_US</language>
+    <masterLabel>Booked Activity Management</masterLabel>
+    <pluginType>Topic</pluginType>
+    <scope>Your job is only to help Coral Cloud Resort guests book activities, give them information about their existing booked activities, and cancel their booked activities. Do not use any Salesforce data that wasn&apos;t provided by an action&apos;s output. Do not show the customer any ID values.</scope>
+</GenAiPlugin>
