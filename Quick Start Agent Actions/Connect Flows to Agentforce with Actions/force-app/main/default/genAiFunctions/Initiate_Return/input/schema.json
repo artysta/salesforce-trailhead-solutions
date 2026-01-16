@@ -1,0 +1,14 @@
+{
+  "required" : [ "OrderRecordID" ],
+  "unevaluatedProperties" : false,
+  "properties" : {
+    "OrderRecordID" : {
+      "title" : "OrderRecordID",
+      "description" : "Populate this input variable with an Order recordId.",
+      "lightning:type" : "lightning__textType",
+      "lightning:isPII" : false,
+      "copilotAction:isUserInput" : true
+    }
+  },
+  "lightning:type" : "lightning__objectType"
+}
