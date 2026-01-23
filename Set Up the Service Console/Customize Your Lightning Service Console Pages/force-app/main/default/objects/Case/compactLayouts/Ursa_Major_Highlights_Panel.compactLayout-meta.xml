@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CompactLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Ursa_Major_Highlights_Panel</fullName>
+    <fields>Subject</fields>
+    <fields>Priority</fields>
+    <fields>Status</fields>
+    <fields>CaseNumber</fields>
+    <fields>AccountId</fields>
+    <fields>OwnerId</fields>
+    <fields>CreatedDate</fields>
+    <label>Ursa Major Highlights Panel</label>
+</CompactLayout>
