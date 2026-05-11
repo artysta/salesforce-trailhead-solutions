@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Opportunity_Closed_Won_over_5000_alert</name>
+        <label>Opportunity.Opportunity_Closed_Won_over_5000_alert</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <actionName>Opportunity.Opportunity_Closed_Won_over_5000_alert</actionName>
+        <actionType>emailAlert</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+        <nameSegment>Opportunity.Opportunity_Closed_Won_over_5000_alert</nameSegment>
+    </actionCalls>
+    <apiVersion>66.0</apiVersion>
+    <areMetricsLoggedToDataCloud>false</areMetricsLoggedToDataCloud>
+    <description>Migrated from the: Opportunity Won over 5000 workflow rule
+Workflow rule description: Opportunity Won over 5000&quot;</description>
+    <label>Opportunity Won over 5000</label>
+    <migratedFromWorkflowRuleName>Opportunity Won over 5000</migratedFromWorkflowRuleName>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>AUTO_LAYOUT_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <connector>
+            <targetReference>Opportunity_Closed_Won_over_5000_alert</targetReference>
+        </connector>
+        <doesRequireRecordChangedToMeetCriteria>true</doesRequireRecordChangedToMeetCriteria>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>StageName</field>
+            <operator>EqualTo</operator>
+            <value>
+                <stringValue>Closed Won</stringValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Amount</field>
+            <operator>GreaterThan</operator>
+            <value>
+                <numberValue>5000.0</numberValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>
