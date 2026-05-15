@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ExternalServiceRegistration xmlns="http://soap.sforce.com/2006/04/metadata">
+    <label>BankService</label>
+    <namedCredentialReference>Bank</namedCredentialReference>
+    <operations>
+        <active>true</active>
+        <name>updateaccount</name>
+    </operations>
+    <operations>
+        <active>true</active>
+        <name>deleteaccount</name>
+    </operations>
+    <operations>
+        <active>true</active>
+        <name>getaccount</name>
+    </operations>
+    <operations>
+        <active>true</active>
+        <name>addaccount</name>
+    </operations>
+    <registrationProviderType>Custom</registrationProviderType>
+    <schema>{
+    &quot;swagger&quot;: &quot;2.0&quot;,
+    &quot;basePath&quot;: &quot;/&quot;,
+    &quot;info&quot;: {
+        &quot;version&quot;: &quot;1.0&quot;,
+        &quot;title&quot;: &quot;External Service for demo bank&quot;,
+        &quot;description&quot;: &quot;### External Service for demo bank&quot;,
+        &quot;x-vcap-service-name&quot;: &quot;DemoBankRestServices&quot;
+    },
+    &quot;securityDefinitions&quot;: {
+        &quot;basicAuth&quot;: {
+            &quot;type&quot;: &quot;basic&quot;
+        }
+    },
+    &quot;security&quot;: [
+        {
+            &quot;basicAuth&quot;: [
+            ]
+        }
+    ],
+    &quot;tags&quot;: [
+        {
+            &quot;name&quot;: &quot;DemoBankRestServices&quot;
+        }
+    ],
+    &quot;paths&quot;: {
+        &quot;/accounts/{accountName}&quot;: {
+            &quot;get&quot;: {
+                &quot;operationId&quot;: &quot;getAccount&quot;,
+                &quot;summary&quot;: &quot;Retrieves an account&quot;,
+                &quot;description&quot;: &quot;Retrieves the account with specific name&quot;,
+                &quot;consumes&quot;: [
+                    &quot;text/plain&quot;
+                ],
+                &quot;produces&quot;: [
+                    &quot;application/json&quot;
+                ],
+                &quot;parameters&quot;: [
+                    {
+                        &quot;name&quot;: &quot;accountName&quot;,
+                        &quot;in&quot;: &quot;path&quot;,
+                        &quot;required&quot;: true,
+                        &quot;type&quot;: &quot;string&quot;,
+                        &quot;description&quot;: &quot;Name of the account&quot;
+                    }
+                ],
+                &quot;responses&quot;: {
+                    &quot;200&quot;: {
+                        &quot;description&quot;: &quot;The response when system finds an account with given name&quot;,
+                        &quot;schema&quot;: {
+                            &quot;$ref&quot;: &quot;#/definitions/accountDetails&quot;
+                        }
+                    },
+                    &quot;400&quot;: {
+                        &quot;description&quot;: &quot;Error response if the account name parameter is less than minimum characters&quot;,
+                        &quot;schema&quot;: {
+                            &quot;$ref&quot;: &quot;#/definitions/errorModel&quot;
+                        }
+                    },
+                    &quot;404&quot;: {
+                        &quot;description&quot;: &quot;Error response if the account is not supported by service or account is not found&quot;,
+                        &quot;schema&quot;: {
+                            &quot;$ref&quot;: &quot;#/definitions/errorModel&quot;
+                        }
+                    }
+                }
+            },
+            &quot;delete&quot;: {
+                &quot;operationId&quot;: &quot;DeleteAccount&quot;,
+                &quot;summary&quot;: &quot;Deletes an account&quot;,
+                &quot;description&quot;: &quot;Deletes the account with specific name&quot;,
+                &quot;consumes&quot;: [
+                    &quot;text/plain&quot;
+                ],
+                &quot;produces&quot;: [
+                    &quot;application/json&quot;
+                ],
+                &quot;parameters&quot;: [
+                    {
+                        &quot;name&quot;: &quot;accountName&quot;,
+                        &quot;in&quot;: &quot;path&quot;,
+                        &quot;required&quot;: true,
+                        &quot;type&quot;: &quot;string&quot;,
+                        &quot;description&quot;: &quot;Name of the account&quot;
+                    }
+                ],
+                &quot;responses&quot;: {
+                    &quot;204&quot;: {
+                        &quot;description&quot;: &quot;The response when system finds an account with given name&quot;,
+                        &quot;schema&quot;: {
+                            &quot;type&quot;: &quot;string&quot;
+                        }
+                    },
+                    &quot;400&quot;: {
+                        &quot;description&quot;: &quot;Error response if the account name parameter is less than minimum characters&quot;,
+                        &quot;schema&quot;: {
+                            &quot;$ref&quot;: &quot;#/definitions/errorModel&quot;
+                        }
+                    },
+                    &quot;404&quot;: {
+                        &quot;description&quot;: &quot;Error response if the account is not supported by service or account is not found&quot;,
+                        &quot;schema&quot;: {
+                            &quot;$ref&quot;: &quot;#/definitions/errorModel&quot;
+                        }
+                    }
+                }
+            },
+            &quot;post&quot;: {
+                &quot;operationId&quot;: &quot;addAccount&quot;,
+                &quot;summary&quot;: &quot;Add an account&quot;,
+                &quot;description&quot;: &quot;Add an account to the database&quot;,
+                &quot;consumes&quot;: [
+                    &quot;text/plain&quot;
+                ],
+                &quot;produces&quot;: [
+                    &quot;application/json&quot;
+                ],
+                &quot;parameters&quot;: [
+                    {
+                        &quot;name&quot;: &quot;accountName&quot;,
+                        &quot;in&quot;: &quot;path&quot;,
+                        &quot;required&quot;: true,
+                        &quot;type&quot;: &quot;string&quot;,
+                        &quot;description&quot;: &quot;Name of the account&quot;
+                    },
+                    {
+                        &quot;name&quot;: &quot;accountType&quot;,
+                        &quot;in&quot;: &quot;query&quot;,
+                        &quot;required&quot;: true,
+                        &quot;type&quot;: &quot;string&quot;,
+                        &quot;description&quot;: &quot;The type of account&quot;
+                    }
+                ],
+                &quot;responses&quot;: {
+                    &quot;201&quot;: {
+                        &quot;description&quot;: &quot;The response when the account does not already exist and we can create one&quot;,
+                        &quot;schema&quot;: {
+                            &quot;$ref&quot;: &quot;#/definitions/accountDetails&quot;
+                        }
+                    },
+                    &quot;409&quot;: {
+                        &quot;description&quot;: &quot;The response when the account already exists and we cannot create one&quot;,
+                        &quot;schema&quot;: {
+                            &quot;$ref&quot;: &quot;#/definitions/accountDetails&quot;
+                        }
+                    },
+                    &quot;400&quot;: {
+                        &quot;description&quot;: &quot;Error response if the account name parameter is less than minimum characters&quot;,
+                        &quot;schema&quot;: {
+                            &quot;$ref&quot;: &quot;#/definitions/errorModel&quot;
+                        }
+                    },
+                    &quot;404&quot;: {
+                        &quot;description&quot;: &quot;Error response if the account is not supported by service or account is not found&quot;,
+                        &quot;schema&quot;: {
+                            &quot;$ref&quot;: &quot;#/definitions/errorModel&quot;
+                        }
+                    }
+                }
+            },
+            &quot;put&quot;: {
+                &quot;operationId&quot;: &quot;updateAccount&quot;,
+                &quot;summary&quot;: &quot;Updates an account&quot;,
+                &quot;description&quot;: &quot;Updates the account with specified name&quot;,
+                &quot;consumes&quot;: [
+                    &quot;text/plain&quot;
+                ],
+                &quot;produces&quot;: [
+                    &quot;application/json&quot;
+                ],
+                &quot;parameters&quot;: [
+                    {
+                        &quot;name&quot;: &quot;accountName&quot;,
+                        &quot;in&quot;: &quot;path&quot;,
+                        &quot;required&quot;: true,
+                        &quot;type&quot;: &quot;string&quot;,
+                        &quot;description&quot;: &quot;Name of the account&quot;
+                    },
+                    {
+                        &quot;name&quot;: &quot;accountType&quot;,
+                        &quot;in&quot;: &quot;query&quot;,
+                        &quot;required&quot;: true,
+                        &quot;type&quot;: &quot;string&quot;,
+                        &quot;description&quot;: &quot;The type of account&quot;
+                    }
+                ],
+                &quot;responses&quot;: {
+                    &quot;200&quot;: {
+                        &quot;description&quot;: &quot;The response when system finds an account with given name&quot;,
+                        &quot;schema&quot;: {
+                            &quot;$ref&quot;: &quot;#/definitions/accountDetails&quot;
+                        }
+                    },
+                    &quot;400&quot;: {
+                        &quot;description&quot;: &quot;Error response if the account name parameter is less than minimum characters&quot;,
+                        &quot;schema&quot;: {
+                            &quot;$ref&quot;: &quot;#/definitions/errorModel&quot;
+                        }
+                    },
+                    &quot;404&quot;: {
+                        &quot;description&quot;: &quot;Error response if the account is not supported by service or account is not found&quot;,
+                        &quot;schema&quot;: {
+                            &quot;$ref&quot;: &quot;#/definitions/errorModel&quot;
+                        }
+                    }
+                }
+            }
+        }
+    },
+    &quot;definitions&quot;: {
+        &quot;accountDetails&quot;: {
+            &quot;required&quot;: [
+                &quot;id&quot;,
+                &quot;name&quot;,
+                &quot;type&quot;,
+                &quot;availableBal&quot;
+            ],
+            &quot;properties&quot;: {
+                &quot;id&quot;: {
+                    &quot;type&quot;: &quot;string&quot;,
+                    &quot;description&quot;: &quot;id&quot;
+                },
+                &quot;name&quot;: {
+                    &quot;type&quot;: &quot;string&quot;,
+                    &quot;description&quot;: &quot;name&quot;
+                },
+                &quot;type&quot;: {
+                    &quot;type&quot;: &quot;string&quot;,
+                    &quot;description&quot;: &quot;type&quot;
+                },
+                &quot;availableBal&quot;: {
+                    &quot;type&quot;: &quot;string&quot;,
+                    &quot;description&quot;: &quot;availableBal&quot;
+                }
+            }
+        },
+        &quot;errorModel&quot;: {
+            &quot;required&quot;: [
+                &quot;errorCode&quot;,
+                &quot;errorMessage&quot;
+            ],
+            &quot;properties&quot;: {
+                &quot;errorCode&quot;: {
+                    &quot;type&quot;: &quot;string&quot;,
+                    &quot;description&quot;: &quot;A service-specific error code.&quot;
+                },
+                &quot;errorMessage&quot;: {
+                    &quot;type&quot;: &quot;string&quot;,
+                    &quot;description&quot;: &quot;A service-specific error code.&quot;
+                }
+            }
+        }
+    }
+}
+</schema>
+    <schemaType>OpenApi</schemaType>
+    <schemaUrl>/accounts/schema</schemaUrl>
+    <serviceBinding>{&quot;host&quot;:null,&quot;basePath&quot;:&quot;/&quot;,&quot;allowedSchemes&quot;:[],&quot;requestMediaTypes&quot;:[],&quot;responseMediaTypes&quot;:[],&quot;compatibleMediaTypes&quot;:{},&quot;extensions&quot;:{}}</serviceBinding>
+    <status>Complete</status>
+    <systemVersion>8</systemVersion>
+</ExternalServiceRegistration>
